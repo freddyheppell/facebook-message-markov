@@ -13,7 +13,7 @@ This project builds a Markov chain from your Facebook message history
 3. Once your file has been created (this will take some time), download and unzip it
 4. Place the `messages` directory into the root of this project
 5. Run `python3 concat-messages.py`
-6. Run `python3 generate-corpus.py`
+6. Run `python3 generate-model.py`
 
 ## 3. Generating Messages
 
