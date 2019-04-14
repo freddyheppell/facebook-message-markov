@@ -28,7 +28,12 @@ with open('corpus.txt', 'w+') as f:
         with open(prefix + '/' + thread + '/message_1.json') as messages:
             messages = json.load(messages, object_hook=parse_obj)["messages"]
             for message in messages:
-                if message["sender_name"] == name and "content" in message and "Say hi to your new Facebook friend" not in message["content"] and "You sent an attachment." not in message["content"]:
+                if (message["sender_name"] == name and "content" in message
+                and "Say hi to your new Facebook friend" not in message["content"]
+                and "You sent an attachment." not in message["content"]
+                and "You set the nickname for" not in message["content"]
+                and "You changed the group photo." != message["content"]
+                and "You named the group" not in message["content"]):
                     c += 1
                     f.write(message["content"] + "\n")
 
