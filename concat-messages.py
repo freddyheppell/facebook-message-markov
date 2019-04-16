@@ -33,6 +33,8 @@ with open('corpus.txt', 'w+', encoding='utf-8') as f:
                 and "You sent an attachment." not in message["content"]
                 and "You set the nickname for" not in message["content"]
                 and "You changed the group photo." != message["content"]
+                and "You created a poll" not in message["content"]
+                and "You created a plan" not in message["content"]
                 and "You named the group" not in message["content"]):
                     c += 1
                     f.write(message["content"] + "\n")
