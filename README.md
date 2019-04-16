@@ -21,7 +21,7 @@ This project builds a Markov chain from your Facebook message history
 
 You can edit this file to change the number of messages it generates at once.
 
-## Improvements
+## Improvements
 
 * If you have enough messages, try changing line 6 of `generate-model.py` to 
 
