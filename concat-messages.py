@@ -22,10 +22,10 @@ threads = next(os.walk(prefix))[1]
 
 c = 0
 
-with open('corpus.txt', 'w+') as f:
+with open('corpus.txt', 'w+', encoding='utf-8') as f:
     for thread in threads:
         # print(thread)
-        with open(prefix + '/' + thread + '/message_1.json') as messages:
+        with open(prefix + '/' + thread + '/message_1.json', encoding='utf-8') as messages:
             messages = json.load(messages, object_hook=parse_obj)["messages"]
             for message in messages:
                 if (message["sender_name"] == name and "content" in message
